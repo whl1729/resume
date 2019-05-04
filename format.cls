@@ -1,5 +1,65 @@
-% [a4paper]
-\usepackage[centering,paperwidth=210mm,paperheight=297mm,body={180mm,247mm}]{geometry}
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \usepackage{
   array,
@@ -15,48 +75,7 @@
   enumitem,
   fancyhdr,
   tikz,
-  calc % fix hbox too wide for heading, enable caculate
+  calc, % fix hbox too wide for heading, enable caculate
+  titlesec
 }
 
-% \usepackage{latexsym,verbatim,url,CJKutf8}
-\pagestyle{empty}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-\urlstyle{same}
-
-\hypersetup{
-    colorlinks,%
-    citecolor=black,%
-    filecolor=black,%
-    linkcolor=black,%
-    urlcolor=black     % can put red here to better visualize the links
-}
-\definecolor{mygrey}{gray}{.9}
-\definecolor{mygreylink}{gray}{.30}
-\definecolor{labelgrey}{gray}{.50}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-%\linespread{1.25}
-
-%-----------------------------------------------------------
-%Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
-\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth-2\fboxsep}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
-\newcommand{\reslheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{0.8\textwidth-2\fboxsep}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
-\newcommand{\ressubheading}[4]{
-\begin{tabular*}{\textwidth-5mm}{l@{\extracolsep{\fill}}r}
-    \textbf{#1} \textit{#3} & #4 \quad #2 \\
-\end{tabular*}\vspace{-6pt}}
-
-% \newcommand{\ressubsingleheading}[3]{
-% \begin{tabular*}{\textwidth-5mm}{@{\extracolsep{\fill}}lr}
-%     \multirow{2}{*}{\textbf{#1}} & #2 \\
-%     & #3 \\
-% \end{tabular*}\vspace{-6pt}}
-
-\newcommand{\ressubsingleline}[3]{
-\begin{tabular*}{\textwidth-5mm}{ll@{\extracolsep{\fill}}r}
-    \textbf{#1} & \quad\textit{#2} & #3 \\
-\end{tabular*}}
