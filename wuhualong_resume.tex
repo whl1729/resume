@@ -7,7 +7,9 @@
   \small \textbf{\href{http://www.cnblogs.com/wuhualong/}{\huge 伍华龙}} \\  
   136-9167-8556 $\vert$
   \href{mailto:2393361669@qq.com}{2393361669@qq.com} $\vert$
-  \href{https://github.com/whl1729}{\color{blue}{https://github.com/whl1729}} \\
+  深圳市南山区 \\
+  \href{https://github.com/whl1729}{\color{blue}{github.com/whl1729}} $\vert$
+  \href{http://www.cnblogs.com/wuhualong/}{\color{blue}{cnblogs.com/wuhualong/}} \\
 \end{center}
 
 %-----------EDUCATION-----------------
@@ -22,7 +24,7 @@
 \section{专业技能}
   \begin{itemize}[leftmargin=*]
     \item \textbf{编程语言}: 熟悉C/C++和shell，了解汇编、C\#和Python
-    \item \textbf{开发环境}: 熟悉vim、Markdown、Source Insight、Git/SVN、gdb、gcc、ld、make、Jenkins等开发工具，熟悉Linux开发环境
+    \item \textbf{开发环境}: 熟悉vim、Markdown、Source Insight、Git/SVN、gdb、gcc、ld、make等开发工具，熟悉Linux常用操作，了解Jenkins
     \item \textbf{专业基础}: 熟悉数据结构与算法、操作系统、计算机组成原理、计算机网络，了解设计模式
   \end{itemize}
 
@@ -35,21 +37,37 @@
       {嵌入式软件开发工程师}{2016.07 - 2018.09}
       \resumeItemListStart
         \resumeItem{品质宽带}
-          {优化接入网设备数据采集机制，支持数据采集速率定制化，最快速率提升10倍以上。负责完成局端设备的数据采集上传功能。}
-        \resumeItem{CI管理}
-          {负责部门的CI管理，包括CI构建、代码度量、版本管理和发布等。主导完成部门代码SVN切Git、内部CI平台切换到Jenkins；使用shell脚本一键式完成版本号修改和版本上传，版本发布效率提高5倍以上。}
+          {华为在业界推出的智能家宽运维解决方案，部门年度重点项目之一。
+            \begin{itemize}
+                \item 使用C语言实现单板数据采集上报功能。其中采用YANG模型来组织数据，并对数据进行GPB格式编码，然后通过GRPC协议建立单板与NCE（网络云化引擎）连接。
+                \item 使用makefile和shell脚本搭建编译工程，使用Jenkins搭建CI工程，每天定时编译、构建、冒烟，初步保证版本发布的基本功能。
+            \end{itemize}
+          }
+        \resumeItem{配置管理}
+          {包括CI部署、代码度量、版本管理和发布等。
+            \begin{itemize}
+                \item 使用PC-lint、SourceMonitor、CodeDex等工具搭建门禁工程，开发者合入代码时会自动触发门禁构建，门禁检查失败会禁止合入，初步保证代码合入质量。每天定期冒烟测试，进一步确保版本满足基本业务功能。
+                \item 编写shell脚本，一键式完成版本号修改、版本提交、环境升级等操作，版本发布效率提高5倍以上。
+                \item 在公司内部平台发表多篇高质量wiki，指导新CMO快速入门以及新员工解决常见开发环境问题，得到同事和主管的一致认可。
+            \end{itemize}
+          }
         \resumeItem{单板小APP}
-          {为局端单板软件提供小APP功能，使得单板软件被损坏后依然能通过小APP正常启动，从而有效提高系统稳定性。主导完成单板软件的裁剪、编码、联调等流程，最终按时零缺陷交付。}
+          { 用于解决单板软件出现故障后无法正常启动的问题，能够提高系统健壮性和团队开发效率。
+            \begin{itemize}
+                \item 作为开发人员，使用C语言裁剪和修改本领域原有代码，并新增调试手段，提高问题定位效率。
+                \item 作为特性owner，协调、推动各领域进行开发、联调和问题定位，在时间紧迫的情况下按时完成交付，转测试后零缺陷。
+            \end{itemize}
+          }
         \resumeItem{NAT}
-          {为局端设备提供NAT业务，使得同一局域网内的终端设备可以共用一个ip，从而解决ip资源短缺的问题。负责代码开发及联调，代码量约5K。}
+          {使用C语言在局端设备上实现NAT功能，使得同一局域网内的终端设备可以共用一个ip，从而解决ip资源短缺的问题。负责代码开发及联调，代码量约5K。}
       \resumeItemListEnd
 
     \resumeSubheading
       {华为技术有限公司}{深圳坂田}
       {软件开发实习生}{2015.07 - 2015.12}
       \resumeItemListStart
-        \resumeItem{代码生成工具}
-          {使用C\#语言编写“寄存器代码生成工具”，即读取Excel表格和Perl文件中的寄存器信息，生成Xml文件，再进一步生成C语言代码。该工具简化了新增寄存器的代码量，有效提升部门开发效率。}
+        \resumeItem{寄存器代码生成工具}
+          {使用C\#语言读取Excel表格和Perl文件中的寄存器信息，同时生成xml文件和C语言代码。该工具界面简洁友好，方便开发人员查询寄存器信息，并自动生成C语言代码，有效提升部门开发效率。}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
